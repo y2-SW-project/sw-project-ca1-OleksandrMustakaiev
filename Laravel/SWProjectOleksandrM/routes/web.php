@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductListController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('productlist', [ProductListController::class, 'productlist']);
+Route::get('/product', [ProductController::class, 'product']);
+Route::get('/checkout', [CheckoutController::class, 'checkout']);
+Route::get('/login', [LoginController::class, 'login']);
+Route::get('/register', [RegisterController::class, 'register']);
