@@ -26,3 +26,4 @@ Route::get('/product', [ProductController::class, 'product']);
 Route::get('/checkout', [CheckoutController::class, 'checkout']);
 Route::get('/login', [LoginController::class, 'login']);
 Route::get('/register', [RegisterController::class, 'register']);
+Route::get('image/{main}', 'HomeController@displayImage')->name('image.displayImage');
