@@ -16,7 +16,7 @@
 
                     <p class="h4">You are logged in as an Ordinary User!</p>
                     <p></p>
-                    <p class="h6">Go back to <a href="/productlist" class="link-danger">Product Page</a> view our products.</p>
+                    <p class="h6">Go back to <a class="nav-link" href="/user/products">Products Page</a> to view our products.</p>
                 </div>
             </div>
         </div>
