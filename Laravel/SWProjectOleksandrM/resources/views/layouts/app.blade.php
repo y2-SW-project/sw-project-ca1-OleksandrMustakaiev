@@ -19,6 +19,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+    .button_class{position: absolute;bottom: 30px;right: 30px;}
+    </style>
 </head>
 
 <body class="antialiased bg-secondary">
@@ -83,7 +87,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>

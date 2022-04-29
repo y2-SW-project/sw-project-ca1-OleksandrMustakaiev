@@ -7,6 +7,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\User\ProductController as UserProductController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +33,19 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+/* Admin and User Home Pages */
 Route::get('/admin/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.home');
 Route::get('/user/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('user.home');
 
+/* User */
 Route::get('/user/products/', [UserProductController::class, 'index'])->name('user.products.index');
 Route::get('/user/products/{id}', [UserProductController::class, 'show'])->name('user.products.show');
+
+/* Admin */
+Route::get('/admin/products/', [AdminProductController::class, 'index'])->name('admin.products.index');
+Route::get('/admin/products/create', [AdminProductController::class, 'create'])->name('admin.products.create');
+Route::get('/admin/products/{id}', [AdminProductController::class, 'show'])->name('admin.products.show');
+Route::post('/admin/products/store', [AdminProductController::class, 'store'])->name('admin.products.store');
+Route::get('/admin/products/{id}/edit', [AdminProductController::class, 'edit'])->name('admin.products.edit');
+Route::put('/admin/products/{id}', [AdminProductController::class, 'update'])->name('admin.products.update');
+Route::delete('/admin/products/{id}', [AdminProductController::class, 'destroy'])->name('admin.products.destroy');

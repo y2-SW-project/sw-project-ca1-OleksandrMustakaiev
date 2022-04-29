@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('ram');
             $table->string('motherboard');
             $table->string('storage_device');
+            $table->string('image_location');
             $table->timestamps();
         });
     }
