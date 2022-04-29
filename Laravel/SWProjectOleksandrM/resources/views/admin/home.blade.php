@@ -5,7 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-danger">{{ __('Dashboard') }}</div>
+                <div class="card-header bg-dark text-white">
+                <h4 class="mt-2">{{ __('Dashboard') }}</h4></div>
 
                 <div class="card-body">
                     @if (session('status'))

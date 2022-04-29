@@ -3,10 +3,10 @@
 @section('content')
 <div class="container pt-5">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12 col-md-offset-2">
             <div class="card">
-                <div class="card-header">
-                    PC: {{ $products->name }}
+                <div class="card-header bg-dark text-white">
+                    <h4 class="pt-2">PC name: {{ $products->name }}</h4>
                 </div>
                 <div class="card-body">
                     <table id="table-products" class="table">
